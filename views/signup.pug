@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+ h1.text-center.my-3 Sign up Page
+ .container.my-3 
+  form(action="/signup" method="post")
+   .form-group
+    label(for='fullName') Full Name
+    input#fullName.form-control(type='text' name="fullname" placeholder='Enter Name')
+   .form-group.gender
+    strong Choose your gender: 
+     label(for='male') Male
+     input#male(type='radio' name='gender' value='male')
+     label(for='female') Female
+     input#female(type='radio' name='gender' value='female')
+   .form-group
+    label(for='email') Email address
+    input#email.form-control(type='email' name="email" placeholder='Enter email')
+   .form-group
+    label(for='password') Password
+    input#password.form-control(type='password' name="password" placeholder='Enter Password')
+   .form-group
+    label(for='confirmPassword') Confirm Password
+    input#confirmPassword.form-control(type='password' name="confirmPassword" placeholder='Confirm Password')
+   button.btn.bg-dark.text-white.text-center(type='submit') Submit

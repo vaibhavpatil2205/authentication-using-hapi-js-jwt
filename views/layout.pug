@@ -1,0 +1,30 @@
+doctype html
+head
+ meta(charset='UTF-8')
+ meta(http-equiv='X-UA-Compatible' content='IE=edge')
+ meta(name='viewport' content='width=device-width, initial-scale=1.0')
+ link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+ link(rel="stylesheet" href='/css/style.css')
+ title Mini project
+body
+ nav.navbar.navbar-expand-sm.navbar-dark.bg-dark
+  a.navbar-brand(href='#') Mini-Project
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExample03' aria-controls='navbarsExample03' aria-expanded='false' aria-label='Toggle navigation')
+   span.navbar-toggler-icon
+  #navbarsExample03.collapse.navbar-collapse
+   ul.navbar-nav.mr-auto
+    li.nav-item
+     a.nav-link(href='/')
+      | Home 
+      span.sr-only (current)
+    if !user
+     li.nav-item
+      a.nav-link(href='/signup') Sign up
+     li.nav-item
+      a.nav-link(href='/login') Login
+    if user
+     li.nav-item
+      a.nav-link(href='/protected') protected 
+     li.nav-item.logout
+      a.nav-link(href='/logout') logout
+ block content

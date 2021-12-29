@@ -1,0 +1,14 @@
+.logout {
+  margin-left: 1200px;
+}
+
+.index {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender label {
+  padding: 10px;
+}
